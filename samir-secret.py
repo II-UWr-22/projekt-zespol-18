@@ -1,7 +1,6 @@
 import random
 from decimal import Decimal
 
-prime = 2 ** 89 - 1
 
 # Obliczanie wartości wielomianu
 def eval(x, f):
@@ -68,8 +67,23 @@ def decipher2(k, points, val):
         result = (result + (l * od)) % prime
     return result
 
-# Generowanie wielomianu
-e = generating_polynomial(12345, 3, 6)
+sekret = int(input("Podaj sekret: "))
+k = input("Podaj klucz oraz liczbę udziałów: ")
+k = k.split()
+p = int(input("Podaj poziom bezpieczeńśtwa (61, 89, 127): "))
+prime = 2 ** p - 1
 
-print(decipher1(3, e, 0))
-print(decipher2(3, e, 0))
+# Generowanie wielomianu
+e = generating_polynomial(sekret, int(k[0]), int(k[1]))
+print("Wygenerowane punkty:")
+
+for i in e:
+    print(i)
+    
+klucz = int(input("Podaj klucz: "))
+
+x = e[:klucz]
+
+#sposób 1 nie zawsze daje wynik za pierwszym razem
+print(f"Odzyskany sekret sp.1: {decipher1(klucz, x, 0)}")
+print(f"Odzyskany sekret sp.2: {decipher2(klucz, x, 0)}")
