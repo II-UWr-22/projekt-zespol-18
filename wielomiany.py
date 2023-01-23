@@ -54,6 +54,9 @@ def coefficient_form(f):
         wyn[i] = j
     return(wyn[::-1])
 
+x1 = coefficient_form(input("Podaj wielomian f(x): "))
+print("Reprezentacja wielomianu w postaci listy wspolczynnikowej to:",x1)
+
 #3
 
 def eval(f,x):
