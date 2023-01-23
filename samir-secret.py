@@ -1,16 +1,17 @@
 import random
 from decimal import Decimal
 
-prime = 2 ** 61 - 1
+prime = 2 ** 89 - 1
 
 # Obliczanie wartości wielomianu
-def polynomial_value(x0, polynomial): 
-    i = 0
-    res = 0
-    for power in reversed(range(0, len(polynomial))): 
-        res += polynomial[i] * (x0 ** power) 
-        i += 1   
-    return res 
+def eval(x, f):
+	wartosc = 0
+	potega = 0
+	g = f[::-1]
+	for i in g:
+		wartosc += i * x ** potega
+		potega += 1
+	return wartosc
 
 # Generowanie wielomianu
 # 1. Jako pierwszy współczynnik zapisuję s - szyfrowaną liczbę.
@@ -18,18 +19,14 @@ def polynomial_value(x0, polynomial):
 #    tak aby potęgi przy współczynnikach malały.
 # 3. Dla losowo wybranych punktów obliczam wartość wielomianu 
 #    i zapisuje parę punktów.
-
 def generating_polynomial(s, k, n):
     polynomial = [s] 
-
     for i in range(k-1):
         polynomial.append((random.randint(1, prime)))
-
     polynomial.reverse()
     shares = []
-
     for i in range(1, n+1):
-        shares.append((i, polynomial_value(i, polynomial) % prime))   
+        shares.append((i, eval(i, polynomial) % prime))   
     return shares
 
 # Odszyfrowywanie sekretu v1.
@@ -37,7 +34,6 @@ def generating_polynomial(s, k, n):
 # 2. Rozdzielam je na wartości x oraz wartości y
 # 3. Stosuję wzór: https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing
 # 4. Zwracam przybliżoną wartość
-
 def decipher1(k, points, val):
     x_values, y_values = zip(*points)
     result = 0
@@ -72,6 +68,7 @@ def decipher2(k, points, val):
         result = (result + (l * od)) % prime
     return result
 
+# Generowanie wielomianu
 e = generating_polynomial(12345, 3, 6)
 
 print(decipher1(3, e, 0))
