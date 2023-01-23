@@ -65,9 +65,9 @@ def eval(f,x):
 
 def calculate_coefficients():
     points = []
-    n = int(input("Enter the number of points of the polynomial: "))
+    n = int(input("Podaj liczbę punktów wielomianu: "))
     for i in range(n):
-        x, y = map(int, input("Enter x and y for point {}: ".format(i+1)).split())
+        x, y = map(int, input("Wprowadź x i y dla punktu {}: ".format(i+1)).split())
         points.append((x, y))
 
     x = [p[0] for p in points]
@@ -85,6 +85,6 @@ def lagrange(f, x):
 
     return value
 
-x = input("Enter the point x for which you want to calculate the value of the polynomial: ")
+x = input("Wpisz punkt x, dla którego chcesz obliczyć wartość wielomianu: ")
 
-print("The value of the polynomial in this point x is: ", lagrange(coefficients, int(x)))
+print("Wartość wielomianu w tym punkcie x wynosi: ", lagrange(coefficients, int(x)))
