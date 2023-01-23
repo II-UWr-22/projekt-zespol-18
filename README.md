@@ -48,5 +48,6 @@ Do uruchomienia pliku wielomiany.py potrzebne będzie zainstalowanie biblioteki 
 ## Uruchamianie plików 
 
 Aby uruchomić plik wielomiany.py należy w terminalu wpisać: python wielomiany.py albo python3 wielomiany.py zależnie od zainstalowanej wersji pythona.
+
 Aby uruchomić plik samir-secret.py należy w terminalu wpisać: python samir-secret.py albo python3 samir-secret.py zależnie od zainstalowanej wersji pythona.
 
