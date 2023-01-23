@@ -54,7 +54,12 @@ def coefficient_form(f):
         wyn[i] = j
     return(wyn[::-1])
 
+x1 = coefficient_form(input("Podaj wielomian f(x): "))
+print("Reprezentacja wielomianu w postaci listy wspolczynnikowej to:",x1)
+
 #3
+
+
 
 def eval(f,x):
 	wartosc=0
@@ -65,6 +70,14 @@ def eval(f,x):
 		potega+=1
 	return wartosc
 
+x=int(input("Podaj punkt, dla którego chcesz obliczyć wartość wielomianu: ")
+y=input("Podaj pierwszy współczynnik wielomianu: ")
+f=[]
+while y!='end:
+	f.append(int(y))
+	y=input("Podaj kolejne współczynniki wielomianu: ")
+	print("Aby zakończyć, wpisz 'end'" 
+print('Wartość tego wielomianu w punkcie x =',x,'wynosi:',eval(f,x))
 
 # 4 
 
