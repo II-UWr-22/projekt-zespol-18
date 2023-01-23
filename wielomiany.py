@@ -63,6 +63,7 @@ def eval(f,x):
 
 # 4 
 
+#funkcja calculate_coefficients() oblicza współczynniki wielomianu na podstawie zbióru par wartości wielomianu w punktach
 def calculate_coefficients():
     points = []
     n = int(input("Podaj liczbę punktów wielomianu: "))
@@ -78,6 +79,7 @@ def calculate_coefficients():
 
 coefficients = calculate_coefficients()
 
+#funkcja lagrange(f, x) na podstawie obliczonych współczynników wyznacza wartość wielomianu dla podanego argumentu 
 def lagrange(f, x):
     value = 0
     for i in range(len(f)):
