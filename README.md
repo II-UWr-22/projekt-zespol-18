@@ -1,4 +1,4 @@
-# # Zespół 18, Projekt: Secure backup
+## Zespół 18, Projekt: Secure backup
 ## Wielomiany
 
 Reprezentacje wielomianów:
