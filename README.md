@@ -1,13 +1,9 @@
-# Projekt-zespol-18
-projekt-zespol-18 created by GitHub Classroom
-
-# Projekt PWI: Secure backup
-
+# # Zespół 18, Projekt: Secure backup
 ## Wielomiany
 
 Reprezentacje wielomianów:
 
-- współczynnikowa: wielomian $f$ przechowywany jest jako lista  współczynników przy
+- "współczynnikowa": wielomian $f$ przechowywany jest jako lista  współczynników przy
 kolejnych potęgach zmiennej $x$. Np. $[1, 2, 3]$ odpowiada wielomianowi $f(x) = x^2 + 2 x + 3$;
 
 - "wartościowa": wielomian $f$ przechowywany jest jako zbiór par wartości wielomianu w punktach,
@@ -29,9 +25,9 @@ oblicza wartość wielomianu w tym punkcie.
 ## Szyfrowanie 
 
 Parametry wejściowe \[s, k, n\]:
-- $s$ poziom bezpieczeństwa w bitach (np. 128),
-- $k$ liczba udziałów konieczna do zdeszyfrowania wiadomości,
-- $n$ liczba wszystkich udziałów.
+- $s$ - poziom bezpieczeństwa w bitach (np. 128),
+- $k$ - liczba udziałów konieczna do zdeszyfrowania wiadomości,
+- $n$ - liczba wszystkich udziałów.
 
 1. Generowanie wielomianu (dla $s, k, n$):
 
