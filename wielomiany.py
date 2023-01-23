@@ -2,6 +2,11 @@ from numpy.polynomial import polynomial as P
 
 # 1
 
+# coefficient_form(f) function takes for argument a polynomial in form:
+# "a(n)x^n +/- a(n-1)x^(n-1) +/- ... +/- a(1)x + a(0)" or
+# "- a(n)x^n +/- a(n-1)x^(n-1) +/- ... +/- a(1)x + a(0)", where a(m) is positive integer
+# and returns list of coefficients in form [a(n),a(n-1),...,a(1),a(0)]
+#for example coefficient_form("5x^5 - 2x^3 + x - 1") returns [5, 0, -2, 0, 1, -1]
 def coefficient_form(f):
     def coefficient(x):
         if "x" not in x:
