@@ -70,13 +70,13 @@ def eval(f,x):
 		potega+=1
 	return wartosc
 
-x=int(input("Podaj punkt, dla którego chcesz obliczyć wartość wielomianu: ")
+x=int(input("Podaj punkt, dla którego chcesz obliczyć wartość wielomianu: "))
 y=input("Podaj pierwszy współczynnik wielomianu: ")
 f=[]
-while y!='end:
+while y!='end':
 	f.append(int(y))
 	y=input("Podaj kolejne współczynniki wielomianu: ")
-	print("Aby zakończyć, wpisz 'end'" 
+	print("Aby zakończyć, wpisz 'end'")
 print('Wartość tego wielomianu w punkcie x =',x,'wynosi:',eval(f,x))
 
 # 4 
