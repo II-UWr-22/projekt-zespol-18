@@ -39,11 +39,11 @@ Parametry wejściowe \[s, k, n\]:
 - sekretem (kluczem szyfrującym) jest $f(0)$ - wartość wielomianu $f$ w punkcie $0$,
 - udziałem jest para $(x_i, f(x_i)$.
 
-# Uruchamianie plików i instrukcja do zinstalowania potrzebnych paczek
+# Uruchamianie plików i instrukcja do zainstalowania potrzebnych paczek
 
 ## Instalowanie paczek 
 
-Do uruchomienia pliku wielomiany.py potrzebne będzie zainstalowanie biblioteki numpy poniższy link pokazuje jak to zrobic: https://numpy.org/install/
+Do uruchomienia pliku wielomiany.py potrzebne będzie zainstalowanie biblioteki numpy poniższy link pokazuje jak to zrobić: https://numpy.org/install/
 
 ## Uruchamianie plików 
 
