@@ -57,6 +57,25 @@ def coefficient_form(f):
 x1 = coefficient_form(input("Podaj wielomian f(x): "))
 print("Reprezentacja wielomianu w postaci listy wspolczynnikowej to:",x1)
 
+#2
+def transform(f,A):
+    return [(x,eval(f,x)) for x in A]
+    
+f=coefficient_form(input("Podaj f(x) aby zamienic go na reprezentacje wartosciowa: "))
+
+def eval(f,x):
+	wartosc=0
+	potega=0
+	g=f[::-1]
+	for i in g:
+		wartosc+=i*x**potega
+		potega+=1
+	return wartosc
+print(transform(f,[1,2,3]))
+
+
+
+
 #3
 
 
